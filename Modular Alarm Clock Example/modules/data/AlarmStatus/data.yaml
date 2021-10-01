@@ -1,0 +1,7 @@
+Data:
+  name: AlarmStatusDataModel
+  version: 0.0.1
+  composition:
+    - name: isAlarmActive
+      type: bool
+      description: Has the alarm been activated because it is before or equal to the current time.

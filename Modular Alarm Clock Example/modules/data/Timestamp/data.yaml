@@ -1,0 +1,7 @@
+Data:
+  name: TimestampDataModel
+  version: 0.0.1
+  composition:
+    - name: time
+      type: int
+      description: Milliseconds since epoch.

@@ -1,0 +1,4 @@
+{
+    "name": "MyClockBehavior",
+    "implementation": "Proxy"
+}

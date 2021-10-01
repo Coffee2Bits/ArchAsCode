@@ -1,0 +1,8 @@
+Model:
+  name: ClockServiceModel
+  version: 0.0.1
+  super-type: Service
+  type: ClockService
+  data-out:
+    - name: Current Clock Time
+      model: TimestampDataModel:0.0.1 

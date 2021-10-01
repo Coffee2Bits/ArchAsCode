@@ -1,0 +1,15 @@
+Model:
+  name: AlarmServiceModel
+  version: 0.0.1
+  super-type: Service
+  type: AlarmService
+  data-in:
+    - name: Set Current Time
+      model: TimestampDataModel:0.0.1
+    - name: Set Alarm Time
+      model: TimestampDataModel:0.0.1 
+    - name: Set Alarm Acknowledgement Status 
+      model: AlarmAcknowledgementDataModel:0.0.1
+  data-out:
+    - name: Get Alarm Status
+      model: AlarmStatusDataModel:0.0.1 

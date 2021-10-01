@@ -1,0 +1,17 @@
+System:
+  name: MyAlarmClock
+  components:
+    - name: MyClock
+      type: ClockServiceModel
+      behavior: ClockBehavior
+      implementation: 
+        module: DigitalClock:0.0.1
+    - name: MyAlarm
+      type: AlarmServiceModel
+      behavior: AlarmBehavior
+      implementation: 
+        module: ConfigurableAlarm:1.0.2
+    - name: MyAlarmController
+      type: AlarmControllerModel
+      implementation: 
+        module: ConfigurableAlarm:1.0.2

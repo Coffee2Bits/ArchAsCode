@@ -1,0 +1,7 @@
+Data:
+  name: AlarmAcknowledgmentDataModel
+  version: 0.0.1
+  composition:
+    - name: isAlarmAcknowledged
+      type: bool
+      description: Has the active alarm been acknowledged.

@@ -1,0 +1,4 @@
+Implementation:
+  name: DigitalClock
+  implements-type : ClockService
+  version: 0.0.1
