@@ -1,0 +1,4 @@
+Implementation:
+  name: HttpLink
+  implements-type : DirectedLink
+  version: 0.0.1

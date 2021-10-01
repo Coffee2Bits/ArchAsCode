@@ -1,0 +1,4 @@
+Implementation:
+  name: KafkaLink
+  implements-type : PubSubLink
+  version: 0.0.1

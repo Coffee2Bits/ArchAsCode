@@ -1,17 +1,40 @@
 System:
   name: MyAlarmClock
+  description: My system model depicting an alarm clock.
+
   components:
     - name: MyClock
       type: ClockServiceModel
       behavior: ClockBehavior
-      implementation: 
-        module: DigitalClock:0.0.1
+      implementation: DigitalClock:0.0.1
     - name: MyAlarm
       type: AlarmServiceModel
       behavior: AlarmBehavior
-      implementation: 
-        module: ConfigurableAlarm:1.0.2
+      implementation: ConfigurableAlarm:1.0.2
     - name: MyAlarmController
       type: AlarmControllerModel
-      implementation: 
-        module: ConfigurableAlarm:1.0.2
+      #No implementation specified, because it hasn't been implemented it yet.
+
+  channels:
+    - name: clockAlarmChannel
+      origin: MyClock
+      target: MyAlarm
+      data-models: 
+        - TimestampDataModel:0.0.1 
+      implementation: GrpcLink:0.0.1
+    - name: alarmToAlarmControllerChannel
+      origin: MyAlarm
+      target: MyAlarmController
+      data-models: 
+        - AlarmStatusDataModel:0.0.1
+      implementation: Http2Link:0.0.1
+    - name: AlarmControllerToAlarmChannel
+      origin: MyAlarmController
+      target: MyAlarm
+      #Should consider expanding this data-models structure to include information such as routing to controllers and endpoints
+      data-models: 
+        - AlarmAcknowledgmentDataModel:0.0.1 
+        - TimestampDataModel:0.0.1
+      implementation: Http2Link:0.0.1
+
+  implementation: KubernetesClusterSystem:0.0.1

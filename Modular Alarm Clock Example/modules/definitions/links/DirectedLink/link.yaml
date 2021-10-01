@@ -1,0 +1,4 @@
+Link:
+  name: DirectedLink
+  super-type: Link
+  version: 0.0.1
