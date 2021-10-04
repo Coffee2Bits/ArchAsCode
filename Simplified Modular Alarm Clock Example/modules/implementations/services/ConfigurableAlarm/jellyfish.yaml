@@ -1,0 +1,4 @@
+Implementation:
+  name: ConfigurableAlarm
+  implements-type : AlarmService
+  version: 1.0.2

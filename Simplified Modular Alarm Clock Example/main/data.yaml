@@ -1,0 +1,22 @@
+Data:
+  name: AlarmAcknowledgmentDataModel
+  composition:
+    - name: isAlarmAcknowledged
+      type: bool
+      description: Has the active alarm been acknowledged.
+
+---
+Data:
+  name: AlarmStatusDataModel
+  composition:
+    - name: isAlarmActive
+      type: bool
+      description: Has the alarm been activated because it is before or equal to the current time.
+
+---
+Data:
+  name: TimestampDataModel
+  composition:
+    - name: time
+      type: int
+      description: Milliseconds since epoch.

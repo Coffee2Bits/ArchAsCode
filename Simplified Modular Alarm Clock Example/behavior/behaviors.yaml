@@ -1,0 +1,24 @@
+Behavior:
+  name: MyAlarmBehavior
+  description: The alarm should be able to trigger an alarm, acknowledge an alarm, set an alarm, and check the current time.
+  requirements-link:
+    - name: deactivateAlarm 
+      requirements: 
+        - JF-3291
+        - JF-3282
+    - name: triggerAlarm 
+      requirements: 
+        - JF-3291
+        - JF-3282
+
+---
+Behavior:
+  name: MyAlarmControllerBehavior
+  description:
+  implementation: SeleniumWebDriver
+
+---
+Behavior:
+  name: MyClockBehavior
+  description:
+  implementation: WebProxyDriver

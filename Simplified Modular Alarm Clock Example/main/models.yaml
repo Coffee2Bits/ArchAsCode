@@ -1,0 +1,37 @@
+Model:
+  name: AlarmServiceModel
+  super-type: Service
+  type: AlarmService
+  data-in:
+    - name: Set Current Time
+      model: TimestampDataModel
+    - name: Set Alarm Time
+      model: TimestampDataModel 
+    - name: Set Alarm Acknowledgement Status 
+      model: AlarmAcknowledgementDataModel
+  data-out:
+    - name: Get Alarm Status
+      model: AlarmStatusDataModel 
+
+--- 
+Model:
+  name: AlarmControllerModel
+  super-type: Service
+  type: AlarmControllerService
+  data-in:
+    - name: Get Alarm Status
+      model: AlarmStatusDataModel
+  data-out:
+    - name: Set Alarm Time
+      model: TimestampDataModel
+    - name: Acknowledge Alarm
+      model: AlarmAcknowledgementDataModel
+
+---
+Model:
+  name: ClockServiceModel
+  super-type: Service
+  type: ClockService
+  data-out:
+    - name: Current Clock Time
+      model: TimestampDataModel
